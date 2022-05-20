@@ -1,16 +1,8 @@
-//import './style.css';
 
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.115/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.115/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.115/examples/jsm/loaders/GLTFLoader.js';
 import { DragControls } from "https://cdn.jsdelivr.net/npm/three@0.115/examples/jsm/controls/DragControls.js";
-
-
-//import luffy from './luffy.jpg';
-//import space from './space1.jpg';
-//import moon_img from './moon.jpg';
-//import normal_img from './normal.jpg';
-//import dog_obj from './dog.glb';
 
 // 1 -  Define setup
 
