@@ -5,6 +5,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { DragControls } from 'three/examples/jsm/controls/DragControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'; 
 
+import luffy from './luffy.jpg';
+import space from './space1.jpg';
+import moon_img from './moon.jpg';
+import normal_img from './normal.jpg';
+//import dog_obj from './dog.glb';
+
 // 1 -  Define setup
 
 const scene = new THREE.Scene();
@@ -28,7 +34,7 @@ const geometry = new THREE.TorusGeometry(15, 3, 16, 100);
 //const material = new THREE.MeshBasicMaterial({ color: 0xff6347, wireframe: true });
 //const material = new THREE.MeshStandardMaterial({ color: 0xff6347});
 
-const torusTexture = new THREE.TextureLoader().load('resources/luffy.jpg');
+const torusTexture = new THREE.TextureLoader().load(luffy);
 
 torusTexture.wrapS = THREE.RepeatWrapping;
 torusTexture.wrapT = THREE.RepeatWrapping;
@@ -73,7 +79,7 @@ function addStar() {
 Array(200).fill().forEach(addStar);
 
 // 8 - Background
-const spaceTexture = new THREE.TextureLoader().load('resources/space1.jpg');
+const spaceTexture = new THREE.TextureLoader().load(space);
 scene.background = spaceTexture;
 
 // 9 -  Avatar
@@ -82,8 +88,8 @@ scene.background = spaceTexture;
 //scene.add(avatar);
 
 //9 - Moon
-const moonTexture = new THREE.TextureLoader().load('resources/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('resources/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(moon_img);
+const normalTexture = new THREE.TextureLoader().load(normal_img);
 
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(4, 32, 32),
@@ -105,7 +111,7 @@ var objects = [];   // object for drag control
 let dog;
 
 let loader = new GLTFLoader();
-loader.load( 'resources/dog.glb', 
+loader.load( 'dog.glb', 
     function ( gltf ) {
         //dog = gltf.scene;
         
