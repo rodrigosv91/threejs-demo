@@ -1,4 +1,4 @@
-import './style.css';
+//import './style.css';
 
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.115/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.115/examples/jsm/controls/OrbitControls.js';
@@ -6,10 +6,10 @@ import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.115/examples/js
 import { DragControls } from "https://cdn.jsdelivr.net/npm/three@0.115/examples/jsm/controls/DragControls.js";
 
 
-import luffy from './luffy.jpg';
-import space from './space1.jpg';
-import moon_img from './moon.jpg';
-import normal_img from './normal.jpg';
+//import luffy from './luffy.jpg';
+//import space from './space1.jpg';
+//import moon_img from './moon.jpg';
+//import normal_img from './normal.jpg';
 //import dog_obj from './dog.glb';
 
 // 1 -  Define setup
@@ -35,7 +35,7 @@ const geometry = new THREE.TorusGeometry(15, 3, 16, 100);
 //const material = new THREE.MeshBasicMaterial({ color: 0xff6347, wireframe: true });
 //const material = new THREE.MeshStandardMaterial({ color: 0xff6347});
 
-const torusTexture = new THREE.TextureLoader().load(luffy);
+const torusTexture = new THREE.TextureLoader().load('luffy.jpg');
 
 torusTexture.wrapS = THREE.RepeatWrapping;
 torusTexture.wrapT = THREE.RepeatWrapping;
@@ -80,7 +80,7 @@ function addStar() {
 Array(200).fill().forEach(addStar);
 
 // 8 - Background
-const spaceTexture = new THREE.TextureLoader().load(space);
+const spaceTexture = new THREE.TextureLoader().load('space1.jpg');
 scene.background = spaceTexture;
 
 // 9 -  Avatar
@@ -89,8 +89,8 @@ scene.background = spaceTexture;
 //scene.add(avatar);
 
 //9 - Moon
-const moonTexture = new THREE.TextureLoader().load(moon_img);
-const normalTexture = new THREE.TextureLoader().load(normal_img);
+const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(4, 32, 32),
